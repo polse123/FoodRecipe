@@ -5,12 +5,16 @@
  */
 package acq;
 
+import java.util.Map;
+
 /**
  *
  * @author Bruger
  */
-public interface IData {
-    
-    
-    
+public interface Savable {
+
+    public Map<String, String> saveToMap();
+
+    public abstract void createFromMap(Map<String, String> map);
+
 }

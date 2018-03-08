@@ -1,9 +1,10 @@
 package main;
 
-import acq.IBusiness;
-import business.BusinessFacade;
-import business.RecipeType;
+import acq.*;
+import business.*;
+import data.DataFacade;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -17,12 +18,35 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code applicastiteston logic here
-       // frederikstest
-       // nikolajstest
-       IBusiness business = new BusinessFacade();
-       HashSet<String> ing = new HashSet<>();
-       ing.add("oksekød");
-       business.CreateRecipe("lagsagne", RecipeType.MAIN_COURSE, 90, "mix it all up", ing);
+        // frederikstest
+        // nikolajstest
+        RecipeManager rM = new RecipeManager();
+        IBusiness business = new BusinessFacade();
+        DataFacade dF = new DataFacade();
+        HashSet<String> ing = new HashSet<>();
+        HashSet<String> ing2 = new HashSet<>();
+
+        // save
+        ing.add("oksekød");
+        ing.add("ost");
+        ing2.add("chokolade");
+        ing2.add("smør");
+        rM.saveRecipe(new Recipe("lagsagne", RecipeType.MAIN_COURSE, 90, "mix it all up", ing));
+        rM.saveRecipe(new Recipe("Cookie", RecipeType.SNACK, 60, "mix it all up", ing2));
+        dF.saveRecipes(rM.toSet());
+        //*/
+
+        // load
+        /*
+        Map<String, String> loadedData = dF.load();
+        int count = 0;
+        for (Map.Entry<String, String> entry : loadedData.entrySet()) {
+            Map<String, String> map = DataString.toMap(entry.getValue());
+            Recipe r = new Recipe(map);
+            rM.saveRecipe(r);
+        }
+        rM.printRecipes();
+        //*/
     }
-    
+
 }

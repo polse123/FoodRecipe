@@ -1,0 +1,20 @@
+<RecipeData>
+<Cookie><Accessories></Accessories>
+<Type>Snack</Type>
+<PictureFile>null</PictureFile>
+<Matches></Matches>
+<Procedure>mix it all up</Procedure>
+<ingredients>|smør#|chokolade#</ingredients>
+<Time>60</Time>
+<Name>Cookie</Name>
+</Cookie>
+<lagsagne><Accessories></Accessories>
+<Type>Main Course</Type>
+<PictureFile>null</PictureFile>
+<Matches></Matches>
+<Procedure>mix it all up</Procedure>
+<ingredients>|ost#|oksekød#</ingredients>
+<Time>90</Time>
+<Name>lagsagne</Name>
+</lagsagne>
+</RecipeData>
