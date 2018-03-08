@@ -16,7 +16,7 @@ public class Recipe {
     private String name;
 
     // Forret, hovedret,dessert, snack, kaffe ....
-//    private String type;
+    private RecipeType type;
     // minutes
     private int time;
 
@@ -35,17 +35,17 @@ public class Recipe {
     //Tilbehør
     private Set<String> accessories;
 
-    public Recipe(String name, int time, String procedure, Set<String> ingredients) {
+    public Recipe(String name, RecipeType type, int time, String procedure, Set<String> ingredients) {
         this.name = name;
+        this.type = type;
         this.time = time;
         this.procedure = procedure;
         this.ingredients = ingredients;
     }
 
-    public Recipe(String name, int time, String procedure,
-           Set<String> ingredients, String pictureFile, Set<Recipe> matches, 
-           Set<String> accessories) {
+    public Recipe(String name, RecipeType type, int time, String procedure, Set<String> ingredients, String pictureFile, Set<Recipe> matches, Set<String> accessories) {
         this.name = name;
+        this.type = type;
         this.time = time;
         this.procedure = procedure;
         this.ingredients = ingredients;
@@ -108,6 +108,14 @@ public class Recipe {
 
     public void setAccessories(Set<String> accessories) {
         this.accessories = accessories;
+    }
+
+    public RecipeType getType() {
+        return type;
+    }
+
+    public void setType(RecipeType type) {
+        this.type = type;
     }
 
 }
