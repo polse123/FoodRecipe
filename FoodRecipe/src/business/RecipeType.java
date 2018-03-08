@@ -11,36 +11,47 @@ import acq.*;
  *
  * @author Bruger
  */
-public enum RecipeType
-{
+public enum RecipeType {
 
     STARTER("Starter"), MAIN_COURSE("Main Course"),
     DESSERT("Dessert"), BREAKFAST("Breakfast"),
     LUNCH("Lunch"), SNACK("Snack"), DRINK("Drink");
 
-    RecipeType(String string)
-    {
+    RecipeType(String string) {
         this.string = string;
     }
 
     private String string;
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return string;
     }
 
-    public boolean equals(String string)
-    {
-        if (this.string.equalsIgnoreCase(string))
-        {
+    public boolean equals(String string) {
+        if (this.string.equalsIgnoreCase(string)) {
             return true;
-        }
-        else
-        {
+        } else {
             return false;
         }
+    }
+
+    public static boolean exists(String string) {
+        for (RecipeType rT : RecipeType.values()) {
+            if (rT.equals(string)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static RecipeType getType(String string) {
+        for (RecipeType rT : RecipeType.values()) {
+            if (rT.equals(string)) {
+                return rT;
+            }
+        }
+        return null;
     }
 
 }
