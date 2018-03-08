@@ -1,10 +1,10 @@
-package foodrecipe;
+package main;
 
 /**
  *
  * @author Søren Bendtsen
  */
-public class FoodRecipe {
+public class Main {
 
     /**
      * @param args the command line arguments
