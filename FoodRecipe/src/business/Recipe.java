@@ -11,12 +11,14 @@ import java.util.Set;
  *
  * @author Frederik
  */
-public class Recipe {
+public class Recipe
+{
 
     private String name;
 
     // Forret, hovedret,dessert, snack, kaffe ....
     private RecipeType type;
+
     // minutes
     private int time;
 
@@ -35,7 +37,8 @@ public class Recipe {
     //Tilbehør
     private Set<String> accessories;
 
-    public Recipe(String name, RecipeType type, int time, String procedure, Set<String> ingredients) {
+    public Recipe(String name, RecipeType type, int time, String procedure, Set<String> ingredients)
+    {
         this.name = name;
         this.type = type;
         this.time = time;
@@ -43,7 +46,8 @@ public class Recipe {
         this.ingredients = ingredients;
     }
 
-    public Recipe(String name, RecipeType type, int time, String procedure, Set<String> ingredients, String pictureFile, Set<Recipe> matches, Set<String> accessories) {
+    public Recipe(String name, RecipeType type, int time, String procedure, Set<String> ingredients, String pictureFile, Set<Recipe> matches, Set<String> accessories)
+    {
         this.name = name;
         this.type = type;
         this.time = time;
@@ -54,67 +58,83 @@ public class Recipe {
         this.accessories = accessories;
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
 
-    public int getTime() {
+    public int getTime()
+    {
         return time;
     }
 
-    public void setTime(int time) {
+    public void setTime(int time)
+    {
         this.time = time;
     }
 
-    public String getProcedure() {
+    public String getProcedure()
+    {
         return procedure;
     }
 
-    public void setProcedure(String procedure) {
+    public void setProcedure(String procedure)
+    {
         this.procedure = procedure;
     }
 
-    public String getPictureFile() {
+    public String getPictureFile()
+    {
         return pictureFile;
     }
 
-    public void setPictureFile(String pictureFile) {
+    public void setPictureFile(String pictureFile)
+    {
         this.pictureFile = pictureFile;
     }
 
-    public Set<String> getIngredients() {
+    public Set<String> getIngredients()
+    {
         return ingredients;
     }
 
-    public void setIngredients(Set<String> ingredients) {
+    public void setIngredients(Set<String> ingredients)
+    {
         this.ingredients = ingredients;
     }
 
-    public Set<Recipe> getMatches() {
+    public Set<Recipe> getMatches()
+    {
         return matches;
     }
 
-    public void setMatches(Set<Recipe> matches) {
+    public void setMatches(Set<Recipe> matches)
+    {
         this.matches = matches;
     }
 
-    public Set<String> getAccessories() {
+    public Set<String> getAccessories()
+    {
         return accessories;
     }
 
-    public void setAccessories(Set<String> accessories) {
+    public void setAccessories(Set<String> accessories)
+    {
         this.accessories = accessories;
     }
 
-    public RecipeType getType() {
+    public RecipeType getType()
+    {
         return type;
     }
 
-    public void setType(RecipeType type) {
+    public void setType(RecipeType type)
+    {
         this.type = type;
     }
 

@@ -11,27 +11,34 @@ import acq.*;
  *
  * @author Bruger
  */
-public enum RecipeType {
+public enum RecipeType
+{
 
     STARTER("Starter"), MAIN_COURSE("Main Course"),
     DESSERT("Dessert"), BREAKFAST("Breakfast"),
     LUNCH("Lunch"), SNACK("Snack"), DRINK("Drink");
 
-    RecipeType(String string) {
+    RecipeType(String string)
+    {
         this.string = string;
     }
 
     private String string;
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return string;
     }
 
-    public boolean equals(String string) {
-        if (this.string.equalsIgnoreCase(string)) {
+    public boolean equals(String string)
+    {
+        if (this.string.equalsIgnoreCase(string))
+        {
             return true;
-        } else {
+        }
+        else
+        {
             return false;
         }
     }
