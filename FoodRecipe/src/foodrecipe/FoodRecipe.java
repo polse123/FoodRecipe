@@ -11,6 +11,8 @@ public class FoodRecipe {
      */
     public static void main(String[] args) {
         // TODO code applicastiteston logic here
+       // frederikstest
+       // nikolajstest
     }
     
 }
