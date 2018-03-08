@@ -5,10 +5,14 @@
  */
 package acq;
 
+import business.RecipeType;
+import java.util.Set;
+
 /**
  *
  * @author Bruger
  */
 public interface IBusiness {
     
+    void CreateRecipe(String name, RecipeType type, int time, String procedure, Set<String> ingredients);
 }

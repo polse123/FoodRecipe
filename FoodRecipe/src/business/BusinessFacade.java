@@ -6,6 +6,7 @@
 package business;
 
 import acq.*;
+import java.util.Set;
 
 /**
  *
@@ -13,5 +14,10 @@ import acq.*;
  */
 public class BusinessFacade implements IBusiness
 {
+
+    @Override
+    public void CreateRecipe(String name, RecipeType type, int time, String procedure, Set<String> ingredients) {
+        
+    }
 
 }
