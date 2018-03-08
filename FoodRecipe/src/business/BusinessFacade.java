@@ -11,6 +11,7 @@ import acq.*;
  *
  * @author Bruger
  */
-public class BusinessFacade implements IBusiness {
-    
+public class BusinessFacade implements IBusiness
+{
+
 }
